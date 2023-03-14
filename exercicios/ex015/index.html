@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos CSS Externos</title>
+    <!--As CSS podem ser trabalhadas em níveis: um em linha (o estilo é pontual, específico da tag em que foi colocado), de forma interna (o estilo é específico da página em que está, idela para estilos menores) e externo (o estilo mais versátil, vale para todos os documentos na pasta). Os três podem ser combinados, sendo o estilo exteno o mais recomendado. A hierarquia de prioridades é: o estilo em linha se sobrepoe aos estilo interno e externo, o interno se sobrepoe ao estilo externo, que regula todo o estilo da pasta exceto os especificados pelos estilos em linha e internos.-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Exemplo de uso do estilo interno para pontuar que os ítens "h1" desta página são diferentes dos de outras páginas.-->
+    <style>
+        h1 {
+            color: rgb(49, 228, 228);
+        }
+    </style>
+</head>
+<body>
+    <h1>Capítulo 1</h1>
+    <h2>Capítulo 1.1</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam rem in eaque ipsa commodi quidem minus blanditiis, sit libero non aliquid esse pariatur fugit, cum suscipit nisi nesciunt neque earum!</p>
+    <h2>Capítulo 1.2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae rem fugiat dolor aliquam sequi, animi hic doloribus est! Fuga doloremque expedita autem corporis eos quidem dignissimos cum assumenda quibusdam obcaecati!</p>
+    <h1>Capítulo 2</h1>
+    <h2>Capítulo 2.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, explicabo quos culpa soluta voluptate facere aliquid rem possimus similique, earum ipsum illo ipsa. Nesciunt et, ad illum assumenda voluptatum quisquam.</p>
+    <!--Exemplo de estilo em linha para pontuar uma diferença que vale apenas nesta tag.-->
+    <P style="text-align: center;"><a href="pagina-02.html">Página dois</a></P>
+</body>
+</html>

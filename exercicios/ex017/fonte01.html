@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body{ /* Para um dispositivo mostrar uma fonte indicada pelas CSS, é necessário que ele a possua em seu sistema. O ideal é dar mais de uma opção de fonte para os dispositivos. As combinações de fontes dispoem até três opções de substituição ao dispositivos. É recomendado que a última opção seja sempre de um tipo genérico: serif, sans-serif, cursive, monospace, fantasy etc. Também é possível apenas especificar um tipo genérico. No site w3shools.com existem vários exemplos de safe combinations.  */
+            font-family: Arial, Helvetica, sans-serif;
+        
+        /* Medidas absolutas e medidas relativas
+
+            absolutas: cm, mm, in (polegada), pt (ponto), pc (paica). O ponto e a paica são medidas usadas na tipografia, por isso são as medidas de editores de texto.
+
+            relativas: em, ex, rem, vw, vh, %. O em é a altura do M maiúculo, enquanto o ex é a altura x. O rem também é altura do M maiúsculo, mas relativo a fonte especificada no body. O vw (view width) é referente a porcentagem da largura da view port, isto é, a largura da tela de um dispositivo. O mesmo para vh, mas referente a altura da view port. Também é possível usar apenas porcentagens.
+
+            Porém, as mais usadas, são as medidas "px" e "em". Sendo a medida "em" a mais recomendada, pela sua capacidade de adequação a diferentes tipos de tela, mostrando o tamanho relativo ao tamanho natural configurado para aquela tela em que o arquivo está sendo exibido.
+        */
+
+        font-size: 1em; /* 1em equivale a 16px, que é tamanho padrão das fontes na maioria dos sites. Logo, 2em equivalem a 32px. E 0.5em equivale a 8px. */
+
+        /*O peso das fontes: é indicado pela tag "font-weight", e exitem várias formas de indicar o peso de uma fonte.
+            font-weight: os pesos literais como lighter, normal, bold e bolder.
+            font-weight: os pesos numéricos que variam em centenas que vão de 100 a 900, sendo 100 o mais fino e 900 o mais forte.
+        
+            O estilo da fonte é indicado pela tag font-style.
+            font-style: italic, etc.
+        
+            Com a tag text-decoration é possível sublinhar o texto.
+            text-decoration: underline
+
+        A maioria das fontes não tem todas essas variações.
+        Não confundir weight (peso) com width (largura) ou height (altura).*/
+        
+        }
+        
+        /* Também é possível usar shorthands para indicar em apenas uma tag todas as medidas de uma tag. Com a tag shorthand font é possível configurar (exatamente nesta ordem): font-style, font-weight, font-size, font-family.*/
+        h1 { 
+            font: italic bold 3em Arial;
+        }
+
+        h2 {
+            font: italic lighter 2em monospace;
+        }
+        
+        /* É possível designar fontes para pontos específicos do texto.*/
+        p {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ad, sint eveniet nisi corrupti explicabo officiis odio nemo dolorem expedita autem numquam deleniti nulla iusto culpa dignissimos, reiciendis illum animi qui non! Quas saepe, laudantium accusamus eum voluptates aut atque fuga iusto veritatis facere unde quisquam ad fugiat aliquam neque, quasi labore maxime obcaecati ea nihil dolores? Sed architecto inventore iusto harum quasi, nam voluptate in atque ad tenetur voluptatum nostrum odio soluta velit possimus! Vitae ratione possimus molestias? Temporibus, voluptatum saepe corrupti obcaecati adipisci, unde molestias laborum sint perferendis suscipit eos, rerum itaque esse facere hic neque sit ex?</p>
+
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui, accusamus, suscipit in facere eum excepturi voluptatum cum cupiditate fugiat repellendus autem optio natus rem doloribus enim sint molestias iure vel. Quisquam vel perspiciatis iste adipisci, quis iusto expedita praesentium eaque voluptatum! Fugit, architecto. Veniam perferendis officia quisquam quaerat laudantium recusandae dolore hic, eveniet, officiis nisi optio impedit consequuntur nesciunt iusto qui numquam delectus ad, quia nulla consequatur debitis eos dolorem. Deleniti dolorum saepe illum alias reiciendis natus qui expedita quis corporis ipsam voluptatem numquam repudiandae maiores atque inventore, dolore eligendi cumque eaque quas eum non amet. Illo, laboriosam modi!</p>
+</body>
+</html>

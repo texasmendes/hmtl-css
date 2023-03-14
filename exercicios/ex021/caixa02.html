@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+
+        header {
+            background-color: aquamarine;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav {
+            background-color: rgb(29, 122, 199);
+            padding: 3px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315); /*deslocamento vertical, horizontal, blur, spread e cor. Quanto menor o valor, mais a esquerda fica.Junto da tag inset, a sombra paraa ser interna. Por programação, a sombra vem outset, isto é, pra fora. É possível pôr sombra em qualquer caixa, mesmo em h1, por exemplo.*/
+        }
+    
+
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+        }
+        
+        main {
+            background-color: blueviolet;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 0px; /* A tag border-radius arredonda os cantos de uma caixa. Ela pode ser configurada com uma única propriedade (que vale para todos os lados), com duas propriedades valendo para a direita superior/esquerda inferior e esquerdas superior/direita inferior, ou ainda em shorthand, com quatro propriedades, sempre em sentido horário (direta acima, esquerda acima, esquerda baixo, direta baixo). Não é possível usar valores negativos. Lembrando que todos os valores podem ser representados em porcentagem. */
+            box-shadow: 4px 4px 09px 0px rgba(0, 0, 0, 0.384);
+        }
+
+        #assuntos {
+            font-weight: bold;
+            color: white;
+        }
+
+        article {
+            height: 200px;
+            width: 600px;
+            background-color: pink;
+            padding: 5px;
+        }
+
+        article > aside {
+            height: 20px;
+            width: 200px;
+            background-color: rgb(253, 167, 181);
+            text-align: center;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+    </style>
+</head>
+<body> <!-- As tags header, main, footer etc., são divs, porém têm valor semântico, isto é, têm sentido. -->
+    <header> <!-- cabeçalho do site-->
+        <h1>Meu site</h1>
+        <nav> <!-- menus de navegação -->
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main> <!-- conteúdo do  site-->
+        <section id="assuntos"> <!-- a ordem das tags não precisa ser assim sempre, um article pode comportar uma section, por exemplo.-->
+            <p>Política Esportes Tecnologia</p>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Notícias sobre Ipsem Lorem</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione repudiandae doloremque assumenda placeat atque, vero inventore ea saepe sint, totam porro, numquam dicta veniam qui recusandae! Pariatur similique reprehenderit laborum perspiciatis? Doloremque, molestiae tempore sed eligendi rerum, quo minus iure corporis perspiciatis hic ea laborum atque. Corporis molestiae inventore temporibus!</p>
+                <aside>
+                    <p>Autor: Lorem Ipsum</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer> <!-- rodapé do site-->
+        <p>Desenvolvido por Texas Mendes</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1 { /* box-level*/
+            background-color: lightgray;
+            height: 300px; /*altura*/
+            width: 300px; /*largura*/
+
+            /*shorthands*/
+            border: 10px solid pink; /* width (espessura), style e color. */
+
+            padding: 10px 20px; /* top/bottom e right/left */
+
+            margin: 20px auto 40px auto; /* top, right, bottom e left. O auto centraliza. */
+
+            outline: 5px dashed blueviolet; /* width (espessura), style e color. */
+
+            text-align: center;
+
+            /* Uma tag box-level comoo h1 pode ser transformada em uma inline-level com a propriedade display: inline. E claro, as configurações de altura (height) e largura (width) ficarão inutilizadas. */
+        }
+
+        a { /* inline-level */ 
+            border-width: 2px;
+            border-style: solid;
+            border-color: aqua;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            /*Também é possível transformar uma tag normalmente inline-level é uma box-level, bastando usar a tag display: block. Também é possível configurar uma caixa inline-level para que ela tenha certas características (altura, largura etc.) de uma caixa box-level, bastando usar a propriedade display: inline-block.*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixas box-level</h1>
+    <p>Parágrafos também são caixas box-levels. Já os <a href="#"> links são caixas inline-level</a>. Vamos ver como tudo isso funciona.</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Dinâmicas</title>
+</head>
+<body>
+    <!--Exercício feito no dia 28/09/2022-->
+    <h1>Imagens dinâmicas em HTML5</h1>
+    <picture>
+        <!-- O "max-width" não indica o tamanho da imagem configurada no "srcset", mas sim o tamanho máximo que a janela pode atingir antes de trocar uma imagem pela seguinte.-->
+        <source media="(max-width: 740px)" srcset="imagens-dinamicas/paisagem-p.png" type="image/png">
+        <!--A imagem paisagem-p será mostrada até a janela alcançar o limite de 740px. Ultrapassando esse limite, a paisagem-p será trocada pela paisagem-m.-->
+        <source media="(max-width: 1200px)" srcset="imagens-dinamicas/paisagem-m.png" type="image/png">
+        <!--E quando a janela atigir o tamanho limite de 1200px, a imagem-m será trocada pela paisagem-g.-->
+        <img src="imagens-dinamicas/paisagem-g.png" alt="Imagem modelo">
+    </picture>
+</body>
+</html>

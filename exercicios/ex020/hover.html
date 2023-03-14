@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de hover</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        /* O sinal de maior (>) indica filiação, isto é, indica que a ação deve acontecer apenas naquele elemento que está dentro, que é filho de outro elemento.*/
+        div > p { 
+            display: none;
+        }
+
+        div:hover > p {
+            display: block;
+            color: white;
+            background-color: red;
+            width: 140px;
+        }
+
+        div:hover {/* A pseudo-classe (: dois pontos) cria uma ação excepcional. Nesse exemplo, a ação é uma alteração quando o mouse for passado pelo texto (hover). "Pseudo-classes são palavras que definem estados dos elementos dentro do html".*/
+            color: red;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>Passe o mouse sobre o texto abaixo.</p>
+    <div>
+        Passe o mouse aqui
+        <p>Texto Oculto</p>
+    </div>
+    <p>Fim do exemplo</p>
+</body>
+</html>

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* Em HMTL usa-se id, em CSS usa-se #!. 
+Em HTML usa-se class, em CSS usa-se . (ponto-final).
+Só é permitido uma id em todo documento HTML. Para dar uma mesma característica a mais de uma elemento, usa-se class.
+As características em id sobresaem-se de as do class.
+É possível ter mais de uma classe em um elemento: class="basico destaque".
+Também é possível ter uma id e uma class, porém o id sempre se sobrepoe ao class.
+
+.*/
+
+body {
+    background-color: rgb(205, 255, 203);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: rgb(4, 109, 0);
+}
+
+h1#principal { /* Pode-se também apenas colocar #nome. */
+    text-align: center;
+    background-color: green;
+    color: white;
+}
+
+h2 {
+    color: rgb(51, 77, 49);
+}
+
+.basico {
+    color: rgb(114, 14, 114);
+}
+
+.intermediario {
+    color: rgb(177, 7, 177);
+}
+
+.avançado {
+    color: rgb(241, 11, 241);
+}
+
+.destaque {
+    font-style: italic;
+}
