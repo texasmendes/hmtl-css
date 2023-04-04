@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Fundo fixo de tela</title>
     <style>
         body{
             height: 100vh;
-            background-color: black; /* É recomendado usar uma cor de fundo mesmo que o fundo real do site seja uma imagem.*/
+            /* background-color: black; /* É recomendado usar uma cor de fundo mesmo que o fundo real do site seja uma imagem.
             background-image: url(imanges/wallpaper002.jpg);
             background-position: center center;
             background-repeat: repeat-y;
-            background-size: cover; /* O background-size pode ser configurado de quatro formas principais: 
+            background-size: cover; O background-size pode ser configurado de quatro formas principais: 
             
             a) em "auto".
             b) em pixels ou porcetagem para que a imagem de fundo tenha valores pré-definidos (1000px, 100% etc.) e fique sempre na proporção estabelecida. No entanto, partes do fundo podem ficar expostas, já que a imagem estará fixada em uma proporção. No caso das porcentagens, é possível definir além da altura, a largura: 100% 100%, mas a imagem poderá ficar retorcida.
             c) com a propriedade "contain", que fará a imagem ser exibida em sua totalidade sempre, mesmo que a tela mude de tamanho. A consequência disso, é que partes do fundo podem ficar expostas para que a imagem possa ser mostrada na totalidade.
             d) com a propriedade "cover", cobrirá toda a tela visível, porém, em telas menores, mostrará apenas a parte necessária para cobrir aquela tela.
             
-            */
-        }
+            background-attachment: fixed; background-attachment scroll faz com que a imagem de fundo role junto com o conteúdo. Já a propriedade fixed fixa a imagem enquanto o conteúdo é rolado pela tela.*/
+
+            /* O chorthand de background é composto de: color > image > position > repeat > [size] > attachment. Apesar de ser especificado assim, a propriedade size dá erro em vários navegadores, sendo assim necessário especificar a propriedade fora do shorthand.*/
+            background: black url(imanges/wallpaper002.jpg) center center no-repeat fixed;
+            background-size: cover;
+        } 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border-radius: 15px;
