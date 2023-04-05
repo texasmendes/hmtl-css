@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container{
+            background-image: url(imanges/target001.png);
+            background-size: 100% 100%;
+            position: relative;
+            height: 94vh;
+            padding: 10px;
+            background-color: purple;
+        }
+        #conteudo{ /* Normalmente, a movimentação mais comum de um objeto é na horizontal (esquerda e direita) usando o "margin". Porém, para mover um objeto na vertical (cima e baixo), usa-se "position". Para que um objeto tenha movimentação vertical (position absolute etc.), ele precisa estar contindo em um outro objeto. Por programação, o position do objeto contedor é sempre relative, e o do objeto contido tem que estar em absolute. */
+            background-image: url(imanges/target001.png);
+            background-size: 100% 100%;
+            position:absolute; /* Quando um objeto tem position absolute, ele pode ser movido para cima e para baixo (top) e também para esquerda e para a direita (left). O ponto de onde ele irá se distânciar é sempre o canto superior esquerdo do objeto em que ele está contido. Já o seu ponto será sempre o seu próprio canto superior esquerdo. Tanto o eixo de partida (o objeto que contém) quanto o eixo que se afasta (o contido) estão se afastando a partir desses cantos. Os valores podem ser em números absolutos (em px etc.) ou em porcetagem.*/
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            /* left: 50%;
+            top: 50%; */
+            transform: translate(+50% +50%);
+        }
+    </style>
+</head>
+<body>
+    <section id="container"> <!--  -->
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
