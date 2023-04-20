@@ -1,1 +1,65 @@
 @charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /* A propriedade "font-variant" e o valor "small-caps" tornam a fonte em maiúscula, porém deixando a primeira letra mais elevada que as outras. Para configurar todas as letras em maiúsculas (ou em minúsculas), usa-se a propriedade "text-transform" e os valores.*/
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+a { /* Uma forma de configurar um ítem específico que está em diferentes locais do HTML, é juntando declarações numa só, por exemplo: header a, footer a. */
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover { /*Forma alternativa: "header a:hover, footer a:hover".*/
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh; /* Lê-se "dez por cento da view height" da tela.*/
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+section.imagem > p {
+    background-color: rgba(0, 0, 0, 0.411);
+    width: 400px;
+}
+
+footer {
+    background-color: black;
+    color: lightgray;
+    text-align: center;
+    padding: 10px;
+}
