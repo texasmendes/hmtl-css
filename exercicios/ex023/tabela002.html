@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 002</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative; /* O position em relative é necessário para usar o efeito de cabeçalho fixo.*/
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        thead, tfoot {
+            background-color: #383838;
+            color: white;
+        }
+        thead > tr > th { /* Essa é a configuração para ter um cabeçalho fixo em tabelas longas.*/
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+        td.numero {
+            text-align: right;
+        }
+
+        tbody > tr:nth-child(even) { /* A pseudo-classe "nth-child" normalmente é usada para criar o "efeito zebrado" (cores alternadas) numa tabela. Com ela, é possível configurar grupos de linhas sem a necessidade de criar uma classe dentro dessas linhas.*/
+            background-color: lightgray;
+            font-weight: bold;
+        }
+
+        tbody > tr:nth-child(odd) {/*Os valores "odd" e "even" dentro da pseudo-classe "nth-child" significam ímpar e par. Usando o valor odd, todas as linhas ímpares da tabela serão configuradas. Usando o even, todas as linhas pares serão configuradas. É possível usar ambos, porém em diferentes declarações. Outros valores possíveis são os de linhas alternadas (2n, 3n, 4n, 5n...) no qual o número antes de N indica a linha que será configurada. No caso do 2n, a linha configurada será a próxima depois de uma linha. No caso de 3n, será a próxima depois de duas linhas.*/
+            background-color: white;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION
+            THEAD
+                tr, td, th
+            TBODY
+                tr, td, th
+            TFOOT
+                tr, td, th
+    -->
+    <table>
+        <caption>População das Unidades Federativas</caption> <!-- O "caption" é a legenda da tabela. Por seu valor semântico, sempre aparece em cima da tabela, mesmo que a tag não esteja posicionada logo acima da tag "table".-->
+        <thead> <!--A tag THEAD é o título da tabela. Dentro da THEAD pode haver linhas (TR), células títulos (TH) ou células de informação (TD).-->
+            <tr>
+                <th scope="col">Estado</th> <!-- O TH é uma célula que é um título. Para indicar de quem o TH é título, usa-se as propriedade "scope" e os valores "col" e "row". Com o valor col, o scope indica que o TH é o título da coluna em que está. Com o valor row, indica que ele é o título da linha em que está.-->
+                <th scope="col" style="width: 50px;">População</th> <!--Os navegadores, por padrão, definem a aparência do TH em negrito e centralizado, porém é possível mudar isso.-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="numero">45 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="numero">21 168 791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="numero">17 264 943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="numero">14 873 064</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="numero">11 433 957</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="numero">11 377 239</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="numero">9 557 071</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="numero">9 132 076</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="numero">8 602 865</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="numero">7 164 900</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="numero">6 861 924 </td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="numero">6 551 322</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="numero">3 950 359</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="numero">3 894 899</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="numero">3 893 763</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="numero">3 327 550</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="numero">3 327 551</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="numero">3 236 578</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="numero">3 198 185</td>
+            </tr>
+            <tr>
+                <td>DF</td>
+                <td class="numero">2 867 869</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="numero">2 630 098</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="numero">2 227 294</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="numero">1 755 015</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="numero">1 502 759</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="numero">795 145</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="numero">756 500</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="numero">500 826</td>
+            </tr>
+        </tbody>
+        <tfoot> <!-- A tag TFOOT é parte de baixo da tabela, é o seu pé. Dentro dela podem ter TRs, THs e TDs.-->
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="numero"><strong>0000.0000.000</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nesciunt totam laudantium obcaecati doloribus rerum dignissimos esse similique ea? Aperiam cumque libero fugit velit error possimus asperiores dicta deserunt sequi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro aliquam ut quam. Unde possimus voluptas et sint, mollitia facere recusandae dicta autem aperiam minima vitae sunt doloremque eius maiores illo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ex ipsam eveniet quam pariatur aperiam cum, a sed ea nulla aliquam tempora dolorum reprehenderit expedita cumque facere, obcaecati explicabo maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, recusandae ad ullam ratione dolorem odit distinctio a doloribus totam explicabo quisquam repudiandae autem commodi nam vero iusto, repellat at tempora!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nesciunt totam laudantium obcaecati doloribus rerum dignissimos esse similique ea? Aperiam cumque libero fugit velit error possimus asperiores dicta deserunt sequi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro aliquam ut quam. Unde possimus voluptas et sint, mollitia facere recusandae dicta autem aperiam minima vitae sunt doloremque eius maiores illo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ex ipsam eveniet quam pariatur aperiam cum, a sed ea nulla aliquam tempora dolorum reprehenderit expedita cumque facere, obcaecati explicabo maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, recusandae ad ullam ratione dolorem odit distinctio a doloribus totam explicabo quisquam repudiandae autem commodi nam vero iusto, repellat at tempora!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nesciunt totam laudantium obcaecati doloribus rerum dignissimos esse similique ea? Aperiam cumque libero fugit velit error possimus asperiores dicta deserunt sequi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro aliquam ut quam. Unde possimus voluptas et sint, mollitia facere recusandae dicta autem aperiam minima vitae sunt doloremque eius maiores illo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ex ipsam eveniet quam pariatur aperiam cum, a sed ea nulla aliquam tempora dolorum reprehenderit expedita cumque facere, obcaecati explicabo maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, recusandae ad ullam ratione dolorem odit distinctio a doloribus totam explicabo quisquam repudiandae autem commodi nam vero iusto, repellat at tempora!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nesciunt totam laudantium obcaecati doloribus rerum dignissimos esse similique ea? Aperiam cumque libero fugit velit error possimus asperiores dicta deserunt sequi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro aliquam ut quam. Unde possimus voluptas et sint, mollitia facere recusandae dicta autem aperiam minima vitae sunt doloremque eius maiores illo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ex ipsam eveniet quam pariatur aperiam cum, a sed ea nulla aliquam tempora dolorum reprehenderit expedita cumque facere, obcaecati explicabo maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, recusandae ad ullam ratione dolorem odit distinctio a doloribus totam explicabo quisquam repudiandae autem commodi nam vero iusto, repellat at tempora!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nesciunt totam laudantium obcaecati doloribus rerum dignissimos esse similique ea? Aperiam cumque libero fugit velit error possimus asperiores dicta deserunt sequi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro aliquam ut quam. Unde possimus voluptas et sint, mollitia facere recusandae dicta autem aperiam minima vitae sunt doloremque eius maiores illo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ex ipsam eveniet quam pariatur aperiam cum, a sed ea nulla aliquam tempora dolorum reprehenderit expedita cumque facere, obcaecati explicabo maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, recusandae ad ullam ratione dolorem odit distinctio a doloribus totam explicabo quisquam repudiandae autem commodi nam vero iusto, repellat at tempora!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nesciunt totam laudantium obcaecati doloribus rerum dignissimos esse similique ea? Aperiam cumque libero fugit velit error possimus asperiores dicta deserunt sequi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro aliquam ut quam. Unde possimus voluptas et sint, mollitia facere recusandae dicta autem aperiam minima vitae sunt doloremque eius maiores illo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ex ipsam eveniet quam pariatur aperiam cum, a sed ea nulla aliquam tempora dolorum reprehenderit expedita cumque facere, obcaecati explicabo maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, recusandae ad ullam ratione dolorem odit distinctio a doloribus totam explicabo quisquam repudiandae autem commodi nam vero iusto, repellat at tempora!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nesciunt totam laudantium obcaecati doloribus rerum dignissimos esse similique ea? Aperiam cumque libero fugit velit error possimus asperiores dicta deserunt sequi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro aliquam ut quam. Unde possimus voluptas et sint, mollitia facere recusandae dicta autem aperiam minima vitae sunt doloremque eius maiores illo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ex ipsam eveniet quam pariatur aperiam cum, a sed ea nulla aliquam tempora dolorum reprehenderit expedita cumque facere, obcaecati explicabo maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, recusandae ad ullam ratione dolorem odit distinctio a doloribus totam explicabo quisquam repudiandae autem commodi nam vero iusto, repellat at tempora!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nesciunt totam laudantium obcaecati doloribus rerum dignissimos esse similique ea? Aperiam cumque libero fugit velit error possimus asperiores dicta deserunt sequi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro aliquam ut quam. Unde possimus voluptas et sint, mollitia facere recusandae dicta autem aperiam minima vitae sunt doloremque eius maiores illo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ex ipsam eveniet quam pariatur aperiam cum, a sed ea nulla aliquam tempora dolorum reprehenderit expedita cumque facere, obcaecati explicabo maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, recusandae ad ullam ratione dolorem odit distinctio a doloribus totam explicabo quisquam repudiandae autem commodi nam vero iusto, repellat at tempora!</p>
+</body>
+</html>
