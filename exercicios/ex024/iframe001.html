@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de IFrames</title>
+</head>
+<body>
+    <!-- O IFRAME cria uma janela dentro do página html para exibir um site externo a ela. Essa tag é do tipo display inline, isto é, um quadrado numa linha. O tamanho padrão de um IFRAME é 300x150 (lagura e altura) e o seu fundo é trasparente. Essas dimensões podem ser mudadas tanto no html (com parâmetros width e height) como no CSS (que sempre prevalecerá sobre o html). O IFRAME usa o parâmetro "frameborder" para indicar se o quadrado terá ou não cotorno, com o valor "0" para zero contorno e "1" para contorno. Isso também pode ser mudado no CSS com a propriedade "border". Ainda há o parâmetro "scrolling" (com os valores "auto", "yes" e "no") para indicar se haverá ou não uma barra rolagem lateral quando a página exceder o tamanho do iframe. Por padrão, sempre que exceder, haverá barra de rolagem. Hoje em dia, por questões de segurança, o IFRAME é um recurso pouco utilizado. Sites como Google não permitem que sua página seja exibida em iframe.-->
+<h1>Testando o uso de um iframe</h1>
+<p>Acessando o site do 
+    
+    <iframe src="https://www.cursoemvideo.com" frameborder="0" height="500" width="500"></iframe>
+    
+    para aprender a programar.</p>
+
+    <!-- No espaço entre o frameborder e o fechamento normalmente é usado para colocar um texto avisando que o dispositivo não conseguiu ler o iframe. Porém pode ser usado como um link para a página que estaria no iframe.-->
+    <p>O repositório do 
+        
+        <iframe src="https://gustavoguanabara.github.io" frameborder="0"> <a href="https://gustavoguanabara.github.io">Gustavo Guanabara</a></iframe> 
+        
+        também é legal.</p>
+</body>
+</html>
