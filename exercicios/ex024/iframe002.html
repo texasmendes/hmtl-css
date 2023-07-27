@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe {
+            display:block; /* Por ser display inline, o iframe não é centralizado pelo "margin: auto". É preciso tranformá-lo em caixa com a declaração "DISPLAY: block". */
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste com iframe</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam ex et beatae, assumenda maiores expedita neque vitae officiis minus, quas obcaecati, est pariatur odit! Mollitia sequi vitae voluptatum debitis deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dicta recusandae nihil, animi itaque molestias qui iste beatae voluptates fugit repellat ipsam suscipit, maiores quos reprehenderit iusto esse atque. Vero.</p>
+    
+    <!-- É possível usar uma página interna dentro de um iframe, porém o caminho deve ser especificado, por exemplo, se a página estiver dentro de uma outra pasta.-->
+    <iframe src="paginas-extras/pagina001.html" frameborder="0" width="500" height="500">
+        <p> O seu dispositivo não foi capaz de exibir esse conteúdo.</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis error totam numquam possimus asperiores animi assumenda repellat rerum ducimus, nobis dignissimos vel ullam sapiente necessitatibus odio. Architecto molestias odit ad. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, deleniti ullam. Quaerat esse, maiores qui perspiciatis mollitia fugiat aliquam architecto reiciendis voluptas quis harum sint reprehenderit quas error distinctio. Beatae.</p>
+</body>
+</html>
