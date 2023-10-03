@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <!-- Todo o formulário deve vir dentro das tags abre FORM e fecha FORM. A principal prorpiedade da tag Form é a propriedade ACTION que terá como valor o lugar para onde as informações serão enviadas. Esse lugar é uma página de liguagem de programação. Outra propriedade é o AUTOCOMPLETE valor OFF que impederá que apareçam sugestões de autocompletar nos campos de informação. -->
+    <form action="cadastro.php" method="post" autocomplete="off">
+
+    <!-- A tag INPUT cria objetos de entrada. Com o parâmentro TYPE de valor TEXT, o Input cria caixas onde serão escritas as informações de formulários. Toda declaração input type text deve ter um NAME e um ID. O Name é mais util para o HTML e para a linguagem PHP, enquanto o Id é mais útil para a linguagem JAVA SCRIPT e principalmente para relacionar uma etiqueta um objeto de entrada (uma caixa). Cada etiqueta deve ser relacionada à sua Input Text. É importantes relacionar as etiquetas às caixas (aos inputs texts) para que navegadores entendam que esses elementos têm ligação de sentido. Para relacionar uma etiqueta à sua caixa, a etiqueta deve ser envelopada com a tag LABEL. Essa tag tem a propriedade FOR, que pode ter como valor o Name ou o Id da caixa. Porém, para relacionar uma etiqueta a uma caixa, usa-se o Id da caixa. O atributo METHOD tem os valores GET e POST, que servem para mostrar ou ocultar na URL do navegador os dados que foram enviados pelo formulário. O padrão é GET, porém para que os dados não apareçam na URL, usa-se o POST. Isso não tem o mesmo efeito de criptografia, os dados continuam vuneráveis, apenas não mais ficarão visivéis na URL. -->
+        <p><label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="isobrenome"></p>
+
+        <!--Já o botão de submiter essas informações é criado pela tag INPUT propriedade TYPE de valor SUBMIT. O nome no botão de submiter deve ser colocado como valor da propriedade VALUE dentro da tag imput.-->
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>
